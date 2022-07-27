@@ -1,0 +1,476 @@
+@charset "UTF-8";
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.main-index .section-background div .btn-primary, .main-index .section-cards .card-holder .cards a .btn, .main-shop section .card-holder .cards-shop a .btn-primary, .main-contacto form fieldset .btns-fieldset .form-button, .container .row a .btn-primary {
+  margin-top: 1rem;
+  margin-bottom: 1.8rem;
+  background-color: white;
+  border-color: black;
+  color: black; }
+
+.main-index .info-container .first-row .info-right .p-span, .main-index .info-container .second-row .info-left .p-span, .main-nosotros .values-main .production-time .p-span {
+  color: #708883;
+  font-weight: bold;
+  font-size: 1.15rem; }
+
+.main-contacto form fieldset .div-fieldset .form-input, .main-contacto form fieldset .div-fieldset select, .main-contacto form fieldset .div-fieldset textarea {
+  border: 0;
+  padding: 0.5rem;
+  margin-top: 0.5rem; }
+
+/* ANIMACIONES DE TITULOS */
+.main-index .section-background div .scale-item {
+  animation-name: scale-item;
+  animation-timing-function: linear;
+  animation-duration: 1s; }
+
+.main-nosotros .section-main .nosotros-container .scale-item {
+  animation-name: scale-item;
+  animation-timing-function: linear;
+  animation-duration: 1s; }
+
+@keyframes scale-item {
+  from {
+    transform: scale(0.5); }
+  to {
+    transform: scale(1); } }
+
+/* ESTILOS DE HEADER Y MENU DE NAVEGACIÓN */
+header .envio-container {
+  background-color: greenyellow;
+  height: 2rem; }
+  header .envio-container .envio-text {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.4rem; }
+
+header nav .container-fluid .links-container {
+  width: 100%; }
+  header nav .container-fluid .links-container .cart-link .shopping-icon {
+    margin-left: 0.5rem;
+    width: 47%; }
+  header nav .container-fluid .links-container .brand-link .brand-logo {
+    margin: 0 auto;
+    width: 30%; }
+
+/* ----- MEDIA QUERIES DE HEADER Y MENU ----- */
+@media screen and (min-width: 600px) {
+  header .envio-container .envio-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem; }
+  header nav .container-fluid .links-container .cart-link .shopping-icon {
+    margin-left: 0.8rem;
+    width: 36%; }
+  header nav .container-fluid .links-container .brand-link .brand-logo {
+    margin: 0 auto;
+    width: 28%; } }
+
+@media screen and (min-width: 992px) {
+  header nav .container-fluid {
+    flex-direction: column; }
+    header nav .container-fluid .links-container {
+      flex-direction: column; }
+      header nav .container-fluid .links-container .brand-link .brand-logo {
+        width: 50%; }
+    header nav .container-fluid .navbar-collapse ul li {
+      margin: 0 2rem; }
+      header nav .container-fluid .navbar-collapse ul li:hover {
+        font-weight: bold; }
+    header nav .container-fluid .navbar-collapse ul .list-cart-link .cart-link .shopping-icon {
+      width: 25%; }
+      header nav .container-fluid .navbar-collapse ul .list-cart-link .cart-link .shopping-icon:hover {
+        transition: 0.35s;
+        width: 32%; } }
+
+/* ESTILOS DEL FOOTER */
+footer {
+  margin-top: 2rem;
+  background-color: black;
+  color: white;
+  padding: 3rem;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center; }
+  footer .footer-socials {
+    text-align: center;
+    margin-top: 1rem; }
+    footer .footer-socials .social-links {
+      display: flex;
+      justify-content: center; }
+      footer .footer-socials .social-links a img {
+        width: 45%; }
+      footer .footer-socials .social-links a .fb-img {
+        width: 41%; }
+
+/* ----- MEDIA QUERIES PARA FOOTER ----- */
+@media screen and (min-width: 1024px) {
+  footer {
+    margin-top: 2rem;
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center; } }
+
+/* ESTILOS DE ELEMENTOS GENERALES */
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.04rem; }
+
+img {
+  width: 100%; }
+
+main h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold; }
+
+main .title-pages {
+  color: black;
+  margin: 2rem 0;
+  font-size: 2rem; }
+
+main h2 {
+  font-weight: bold; }
+
+main h3 {
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #41504D; }
+
+main h4 {
+  font-weight: bold;
+  font-size: 1.2rem; }
+
+main p {
+  margin: 1rem 0; }
+
+/* ESTILOS DE INDEX */
+.main-index {
+  display: grid;
+  grid-template-areas: "section-background" "section-cards" "info-container" "section-join" "video-index"; }
+  .main-index .section-background {
+    grid-area: section-background;
+    background-image: url(../img/main-background.png);
+    padding: 2.6rem 3.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white; }
+    .main-index .section-background div {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      text-align: center; }
+      .main-index .section-background div .index-sub {
+        font-size: 1.2rem;
+        letter-spacing: 0.15rem; }
+      .main-index .section-background div .btn-primary {
+        padding: 0.7rem 2rem; }
+        .main-index .section-background div .btn-primary:hover {
+          background-color: black;
+          border-color: black;
+          color: white; }
+  .main-index .section-cards {
+    grid-area: section-cards;
+    margin-top: 2rem;
+    padding: 0 2rem;
+    text-align: center; }
+    .main-index .section-cards .card-holder {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0; }
+      .main-index .section-cards .card-holder .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        box-shadow: 0 0.25rem 0.5rem grey;
+        width: 12rem; }
+        .main-index .section-cards .card-holder .cards:hover {
+          box-shadow: 0 0.7rem 1.2rem 0 grey;
+          transition: 0.5s;
+          transform: scale(1.04); }
+        .main-index .section-cards .card-holder .cards a .btn:hover {
+          background-color: black;
+          border-color: black;
+          color: white; }
+  .main-index .info-container {
+    grid-area: info-container; }
+    .main-index .info-container .info-sub {
+      text-align: center;
+      margin: 2rem; }
+    .main-index .info-container .first-row {
+      display: flex;
+      flex-direction: column; }
+      .main-index .info-container .first-row .info-right {
+        padding: 0 2rem;
+        text-align: left; }
+    .main-index .info-container .second-row {
+      display: flex;
+      flex-direction: column; }
+      .main-index .info-container .second-row .info-left {
+        padding: 0 2rem;
+        text-align: right; }
+  .main-index .section-join {
+    grid-area: section-join;
+    background-color: #d1c1a9;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 2rem 0rem; }
+    .main-index .section-join h3 {
+      font-size: 2rem;
+      margin: 0;
+      color: #313131; }
+    .main-index .section-join a {
+      text-decoration: none;
+      letter-spacing: 0.3rem;
+      color: #313131;
+      font-weight: bold; }
+  .main-index .video-index {
+    grid-area: video-index; }
+
+/* ESTILOS DE PAGE "SHOP" */
+.main-shop section .card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; }
+  .main-shop section .card-holder .cards-shop {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    align-items: center; }
+    .main-shop section .card-holder .cards-shop p {
+      margin-top: 0rem; }
+    .main-shop section .card-holder .cards-shop .product-name {
+      font-weight: bold; }
+    .main-shop section .card-holder .cards-shop a .btn-primary:hover {
+      background-color: black;
+      border-color: black;
+      color: white; }
+
+/* ESTILOS DE PAGE "NOSOTROS" */
+.main-nosotros {
+  display: grid;
+  grid-template-areas: "section-main" "history-main" "img-history" "values-main"; }
+  .main-nosotros .section-main {
+    grid-area: section-main;
+    color: white;
+    background-color: black;
+    text-align: center; }
+    .main-nosotros .section-main .nosotros-container .nosotros-left h1 {
+      color: white;
+      margin-bottom: 0.5rem; }
+    .main-nosotros .section-main .nosotros-container .nosotros-left h2 {
+      padding: 1rem 2rem;
+      text-align: center;
+      margin-bottom: 1rem; }
+  .main-nosotros .history-main {
+    grid-area: history-main;
+    padding: 0 2rem;
+    margin: 0 0.5rem 1rem 0.5rem; }
+    .main-nosotros .history-main h3 {
+      margin-top: 2rem; }
+  .main-nosotros .img-history {
+    grid-area: img-history; }
+  .main-nosotros .values-main {
+    grid-area: values-main;
+    margin: 0 0.5rem;
+    padding: 2rem; }
+    .main-nosotros .values-main h2 {
+      padding: 0.5rem;
+      text-align: center;
+      margin-bottom: 1rem; }
+    .main-nosotros .values-main h3 {
+      margin-top: 2rem; }
+
+/* ESTILOS DE PAGE "CONTACTO" */
+.main-contacto {
+  padding: 0 2rem; }
+  .main-contacto section {
+    text-align: center;
+    margin-bottom: 2rem; }
+  .main-contacto form fieldset {
+    background-color: #e3d9ca;
+    padding: 1rem; }
+    .main-contacto form fieldset legend {
+      margin-bottom: 1.3rem;
+      font-size: 1.15rem; }
+    .main-contacto form fieldset .div-fieldset {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column; }
+      .main-contacto form fieldset .div-fieldset .form-input {
+        width: 90%; }
+      .main-contacto form fieldset .div-fieldset select {
+        width: 55%; }
+    .main-contacto form fieldset .btns-fieldset {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1.5rem; }
+      .main-contacto form fieldset .btns-fieldset .form-button {
+        width: 40%;
+        border: 0; }
+        .main-contacto form fieldset .btns-fieldset .form-button:hover {
+          background-color: black;
+          color: white; }
+
+/* ESTILOS DE PAGE "CARRITO" */
+.container .row a .btn-primary:hover {
+  background-color: black;
+  border-color: black;
+  color: white; }
+
+/* ----- MEDIA QUERIES INDEX ----- */
+@media screen and (min-width: 600px) {
+  .main-index .section-background div {
+    padding: 7rem 4rem; }
+    .main-index .section-background div .index-sub {
+      font-size: 1.35rem; }
+    .main-index .section-background div p {
+      margin-top: 4rem; }
+    .main-index .section-background div .btn-primary {
+      margin-top: 2rem; }
+  .main-index .section-cards {
+    grid-area: section-cards;
+    margin-top: 3rem; }
+    .main-index .section-cards .cards {
+      width: 14rem !important; }
+  .main-index .section-join {
+    padding: 2rem 2rem; }
+    .main-index .section-join h3 {
+      font-size: 2.7rem;
+      margin-bottom: 2rem; }
+    .main-index .section-join p {
+      margin-bottom: 2rem; } }
+
+@media screen and (min-width: 1024px) {
+  .main-index {
+    display: grid;
+    grid-template-areas: "section-background section-background" "section-info section-info" "info-container info-container" "section-cards section-cards" "section-join section-join" "video-index video-index"; }
+    .main-index .section-background {
+      grid-area: section-background; }
+      .main-index .section-background div {
+        padding: 8rem 12rem; }
+        .main-index .section-background div h1 {
+          font-size: 4rem;
+          line-height: 1.2;
+          padding: 0 2rem; }
+        .main-index .section-background div .index-sub {
+          font-size: 1.5rem; }
+        .main-index .section-background div p {
+          margin-top: 6rem; }
+        .main-index .section-background div .btn-primary {
+          margin-top: 4rem; }
+    .main-index .info-container .info-sub {
+      margin: 4rem; }
+    .main-index .info-container .first-row {
+      display: flex;
+      flex-direction: row;
+      width: 100%; }
+      .main-index .info-container .first-row .img-left {
+        width: 50%; }
+      .main-index .info-container .first-row .info-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 1.5rem;
+        padding-right: 5rem; }
+    .main-index .info-container .second-row {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%; }
+      .main-index .info-container .second-row .info-left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding-left: 5rem;
+        padding-right: 1.5rem; }
+      .main-index .info-container .second-row .img-right {
+        display: flex;
+        flex-direction: column;
+        width: 50%; }
+    .main-index .section-join {
+      padding: 3rem 4rem; }
+      .main-index .section-join h3 {
+        font-size: 3.5rem; }
+    .main-index .video-index {
+      grid-area: video-index; }
+    .main-index .section-cards {
+      grid-area: section-cards;
+      margin: 3rem 0; }
+      .main-index .section-cards .cards {
+        width: 16rem !important; } }
+
+/* ----- MEDIA QUERIES PAGE "NOSOTROS" ----- */
+@media screen and (min-width: 600px) {
+  .main-nosotros .history-main {
+    text-align: left;
+    padding: 0rem 3rem; }
+  .main-nosotros .values-main {
+    text-align: left;
+    padding: 1.25rem 3rem; } }
+
+@media screen and (min-width: 1024px) {
+  .main-nosotros .section-main .nosotros-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center; }
+    .main-nosotros .section-main .nosotros-container .img-nosotros {
+      width: 50%; }
+    .main-nosotros .section-main .nosotros-container .nosotros-left {
+      width: 50%;
+      padding: 4rem; }
+  .main-nosotros .history-main {
+    margin: 3rem 0.5rem; }
+    .main-nosotros .history-main h3 {
+      margin-bottom: 2rem; }
+  .main-nosotros .values-main h3 {
+    margin: 2rem 0; }
+  .main-nosotros .values-main .h3-comunidad {
+    margin-top: 3rem; } }
+
+/* ----- MEDIA QUERIES PAGE "CONTACTO" ----- */
+@media screen and (min-width: 600px) {
+  .main-contacto form fieldset .div-fieldset .form-input {
+    width: 75%; }
+  .main-contacto form fieldset .div-fieldset select {
+    width: 35%; }
+  .main-contacto form fieldset .btns-fieldset {
+    gap: 3rem; }
+    .main-contacto form fieldset .btns-fieldset .form-button {
+      width: 30%; } }
+
+@media screen and (min-width: 1024px) {
+  .main-contacto form fieldset .div-fieldset .form-input {
+    width: 40%; }
+  .main-contacto form fieldset .div-fieldset select {
+    width: 18%; }
+  .main-contacto form fieldset .div-fieldset textarea {
+    width: 65%; }
+  .main-contacto form fieldset .btns-fieldset {
+    gap: 5rem; }
+    .main-contacto form fieldset .btns-fieldset .form-button {
+      width: 20%; } }
