@@ -12,14 +12,27 @@ const precioGorra = 300
 
 
 
-// ARRAY DE PRODUCTOS
+// CONSTRUCTOR DE PRODUCTOS
 
-const productos = [
-    {id: 01, name: 'Tshirt bordada', price: precioTshirtBordada},
-    {id: 02, name: 'Tshirt grafica', price: precioTshirtGrafica},
-    {id: 03, name: 'Hoodie', price: precioHoodie},
-    {id: 04, name: 'Gorra', price: precioGorra},
-]
+const productos = []
+
+function product(id, name, price) {
+
+    this.id = id
+    this.name = name
+    this.price = price
+}
+
+const tshirtBordada = new product (1, 'Tshirt Bordada', 400)
+const tshirtGrafica = new product (2, 'Tshirt Gráfica', 500)
+const hoodie = new product (3, 'Hoodie', 600)
+const gorra = new product (4, 'Gorra', 300)
+
+
+
+// AGREGADO DE PRODUCTOS AL ARRAY 
+
+productos.push(tshirtBordada, tshirtGrafica, hoodie, gorra)
 
 console.log(productos)
 
@@ -28,10 +41,10 @@ console.log(productos)
 // MOSTRAR Y SOLICITAR PRODUCTOS AL USUARIO
 
 let agregarCarrito = prompt(`Contamos con los siguientes productos: 
-\n${productos[0].name + ' - ' + ' $' + precioTshirtBordada}
-\n${productos[1].name + ' - ' + ' $' + precioTshirtGrafica}
-\n${productos[2].name + ' - ' + ' $' + precioHoodie}
-\n${productos[3].name + ' - ' + ' $' + precioGorra}
+\n${tshirtBordada.name + ' - ' + ' $' + tshirtBordada.price}
+\n${tshirtGrafica.name + ' - ' + ' $' + tshirtGrafica.price}
+\n${hoodie.name + ' - ' + ' $' + hoodie.price}
+\n${gorra.name + ' - ' + ' $' + gorra.price}
 \n Escribe el producto que deseas agregar`)
 
 
@@ -105,10 +118,26 @@ const resumenCompra = carrito.reduce((acc, el) => acc + '\n' + el.name + ' - $' 
 console.log(`CARRITO DE COMPRAS DEL USUARIO:` + resumenCompra)
 
 
-// CALCULO DEL PRECIO TOTAL DEL CARRITO DEL USUARIO A TRAVES DE REDUCE()
 
-const precioFinal = carrito.reduce((acc, el) => acc + el.price, 0)
-console.log('El precio total a pagar es de: ' + precioFinal)
+// CALCULO DEL PRECIO TOTAL CON FUNCION SUMA
+
+let precioFinal = 0
+
+function calculoPrecio(arr, fn){
+    
+    for (let el of arr){
+        fn(el.price)
+    }
+}
+
+function sumaPrecios(num) {
+
+    precioFinal += num
+
+}
+calculoPrecio(carrito, sumaPrecios)
+console.log(`El precio total a pagar es de: $${precioFinal}`)
+
 
 
 // AVISO AL USUARIO DE TOTAL DE PRODUCTOS AGREGADOS Y PRECIO FINAL
